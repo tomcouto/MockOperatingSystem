@@ -1,0 +1,34 @@
+********************
+Project: Operating System Homework
+Version: 2.0
+Author: Tom Couto
+Date: 9/18/2019
+********************
+
+To run just use the Runnable.java file to run and the printout should be in console.
+This requires an editor with a console.
+
+********************
+HW 1(Runnable.java)
+
+How it works:
+
+The runnable class runs a for loop creating a new Process object
+with a random ID and increasing the process counter before adding it to a stack.
+Then the thread is on sleep for 5 seconds before starting the loop again where the old
+process gets printed and then deleted from the stack. After the process is deleted a new process
+is made and put on the stack. This continues for 10 minutes.
+********************
+HW 2(PriorityRun.java)
+
+How to run:
+
+Run PriorityRun.java only
+
+How it works:
+
+The PriorityRun class creates 4 queues to store processes based on a randomly set priority from 1-4. 4 being the highest
+and 1 being the lowest. Only the head of the priority 4 queue is ever 'run'. Every 2 seconds is 1 quantum and each process
+is given a random number of quantums from 1-6. After 2 quantums the priority 4 queue is rotated (round robin). Then if
+the priority 4 queue has less than 10 processes in it the priorities of every lower priority is increased by 1. This ensures
+that all the processes will be run. After 10 quantums, 5 new processes are created and pushed into the queues.
